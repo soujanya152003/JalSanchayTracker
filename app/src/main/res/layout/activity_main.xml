@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/header_title"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/header_subtitle"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- WATER TANK CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tank_level_title"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarTank"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:progressDrawable="@drawable/water_tank_progress"
+                    android:max="100"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/tvTankPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tank_percent_default"
+                    android:textSize="14sp"
+                    android:textColor="#0D47A1"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- STATS CARDS ROW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:background="#1565C0">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="@string/today_savings_label" android:textColor="#FFFFFF" android:textSize="13sp" />
+                    <TextView android:id="@+id/tvTodayLiters" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="@string/default_liters"
+                        android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:background="#0D47A1">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="@string/total_savings_label" android:textColor="#FFFFFF" android:textSize="13sp" />
+                    <TextView android:id="@+id/tvTotalLiters" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:text="@string/default_liters"
+                        android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- IMPACT SCORE CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="16dp" android:background="#E8F5E9">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/impact_score_title" android:textSize="16sp" android:textStyle="bold"
+                    android:textColor="#2E7D32" />
+                <TextView android:id="@+id/tvImpactScore" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="@string/impact_score_default"
+                    android:textSize="20sp" android:textStyle="bold" android:textColor="#1B5E20" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/impact_score_desc" android:textSize="12sp"
+                    android:textColor="#4CAF50" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- BUTTONS -->
+        <Button android:id="@+id/btnAddRainfall" android:layout_width="match_parent"
+            android:layout_height="56dp" android:text="@string/btn_add_rainfall"
+            android:textSize="16sp" android:backgroundTint="#1976D2"
+            android:layout_marginBottom="8dp" />
+
+        <Button android:id="@+id/btnSetup" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="@string/btn_edit_setup"
+            android:backgroundTint="#455A64" android:layout_marginBottom="8dp" />
+
+        <Button android:id="@+id/btnReport" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="@string/btn_monthly_report"
+            android:backgroundTint="#00796B" android:layout_marginBottom="8dp" />
+
+        <Button android:id="@+id/btnTips" android:layout_width="match_parent"
+            android:layout_height="48dp" android:text="@string/btn_tips"
+            android:backgroundTint="#F57C00" android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">JalSanchayTracker</string>
+    <string name="header_title">Jal-Sanchay Tracker</string>
+    <string name="header_subtitle">Track Your Water Wealth</string>
+    <string name="tank_level_title">Water Tank Level</string>
+    <string name="tank_percent_default">0%% Full</string>
+    <string name="tank_percent_format">%1$d%% Full</string>
+    <string name="today_savings_label">Today\'s Savings</string>
+    <string name="total_savings_label">Total Savings</string>
+    <string name="default_liters">0.0 L</string>
+    <string name="liters_format">%1$.1f L</string>
+    <string name="impact_score_title">Impact Score</string>
+    <string name="impact_score_default">0.0 Household Water Days</string>
+    <string name="impact_score_format">%1$.1f Household Water Days</string>
+    <string name="impact_score_desc">(Based on 150 liters/day average)</string>
+    <string name="btn_add_rainfall">+ Add Rainfall Data</string>
+    <string name="btn_edit_setup">Edit Setup (Roof Area)</string>
+    <string name="btn_monthly_report">Monthly Report</string>
+    <string name="btn_tips">Water Harvesting Tips (AI)</string>
+
+    <!-- Setup Activity Strings -->
+    <string name="setup_title">Setup Your Roof</string>
+    <string name="setup_subtitle">Enter your roof details for accurate calculations</string>
+    <string name="label_roof_area">Roof Area (in Square Feet)</string>
+    <string name="hint_roof_area">e.g. 1000</string>
+    <string name="label_tank_capacity">Tank Capacity (in Liters)</string>
+    <string name="hint_tank_capacity">e.g. 5000</string>
+    <string name="btn_save_setup">Save Setup</string>
+
+    <!-- Data Entry Activity Strings -->
+    <string name="data_entry_title">Add Rainfall Data</string>
+    <string name="label_rainfall_mm">Today\'s Rainfall (in mm)</string>
+    <string name="hint_rainfall_mm">e.g. 25.5</string>
+    <string name="label_live_preview">Live Preview</string>
+    <string name="preview_default_text">Enter rainfall to see calculation</string>
+    <string name="preview_format">You will harvest: %1$.1f Liters\n= %2$.1f Household Water Days</string>
+    <string name="error_invalid_number">Please enter a valid number</string>
+    <string name="error_empty_rainfall">Please enter rainfall amount</string>
+    <string name="error_positive_number">Please enter a valid positive number</string>
+    <string name="setup_required">Please complete setup first!</string>
+    <string name="data_saved">Rainfall data saved!</string>
+    <string name="btn_save_entry">Save Entry</string>
+
+    <!-- Report Activity Strings -->
+    <string name="report_title">Monthly Harvesting Report</string>
+
+    <!-- Tips Activity Strings -->
+    <string name="tips_title">Water Harvesting Tips</string>
+    <string name="tips_powered_by">Powered by AI</string>
+    <string name="btn_get_ai_tips">Get AI Tips</string>
+    <string name="tips_default_text">Tap the button to get personalized tips!</string>
+    <string name="tips_fetching">Fetching AI tips...</string>
+    <string name="tips_error">Error: %1$s\n\nCheck your internet connection and API key.</string>
+</resources>

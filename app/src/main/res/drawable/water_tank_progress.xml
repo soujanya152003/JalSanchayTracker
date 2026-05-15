@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background (empty tank) -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="12dp" />
+            <solid android:color="#BBDEFB" />
+            <stroke android:width="2dp" android:color="#1976D2" />
+        </shape>
+    </item>
+    <!-- Progress (water level) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="12dp" />
+                <solid android:color="#1976D2" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>
